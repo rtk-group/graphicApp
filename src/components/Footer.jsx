@@ -1,0 +1,104 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+// social media icons
+import { LuInstagram } from "react-icons/lu";
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa6";
+
+// Footer Component
+const Footer = () => {
+  const socialLinks = [
+    {
+      icon: <FaLinkedinIn />,
+      bg: "bg-blue-600",
+      hoverBg: "bg-blue-700",
+      href: "#",
+    },
+    {
+      icon: <FaFacebookF />,
+      bg: "bg-blue-500",
+      hoverBg: "bg-blue-600",
+      href: "#",
+    },
+    {
+      icon: <LuInstagram />,
+      bg: "bg-gradient-to-tr from-purple-500 to-pink-500",
+      hoverBg: "bg-gradient-to-tr from-purple-600 to-pink-600",
+      href: "#",
+    },
+    {
+      icon: <FaTwitter />,
+      bg: "bg-sky-500",
+      hoverBg: "bg-sky-600",
+      href: "#",
+    },
+  ];
+  return (
+    <footer className="bg-gray-900 text-white pt-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-xl font-bold mb-4">Design<span className="text-indigo-400">Studio</span></h3>
+            <p className="text-gray-400">
+              Creating meaningful design solutions that help brands connect with their audience.
+            </p>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              <li><Link to="/" className="text-gray-400 hover:text-white transition">Home</Link></li>
+              <li><Link to="/portfolio" className="text-gray-400 hover:text-white transition">Portfolio</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition">Services</Link></li>
+              <li><Link to="/about" className="text-gray-400 hover:text-white transition">About</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white transition">Contact</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-4">Services</h4>
+            <ul className="space-y-2">
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition">Brand Identity</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition">Web Design</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition">Print Design</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition">Illustration</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-4">Connect</h4>
+            <ul className="flex space-x-4 mb-4">
+              {/* {[<LuInstagram/>, <FaFacebookF/>, <FaTwitter/> , <FaLinkedinIn />].map((social) => (
+                <a 
+                  key={social} 
+                  href="#" 
+                  className="h-10 w-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-indigo-600 transition"
+                  aria-label={social}
+                >
+                  <span className="text-gray-300">{social}</span>
+                </a>
+              ))} */}
+
+              {socialLinks.map((social, index) => (
+                <li key={index}>
+                  <a
+                    href={social.href}
+                    className={`${social.bg} ${social.hoverBg} p-3 rounded-lg text-white flex items-center justify-center hover:shadow-lg transition-all duration-300`}
+                  >
+                    {social.icon}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p className="text-gray-400">hello@graphics.com</p>
+            <p className="text-gray-400">+91 8439889910</p>
+          </div>
+        </div>
+        <div className="border-t border-gray-800 mt-12 py-4 text-center text-gray-400">
+          <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
