@@ -40,8 +40,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Design<span className="text-indigo-400">Studio</span></h3>
-            <p className="text-gray-400">
+            <img src={'/images/alvess_logo.png'} className="w-30" alt="" />
+            <p className="text-gray-400 mt-2">
               Creating meaningful design solutions that help brands connect with their audience.
             </p>
           </div>

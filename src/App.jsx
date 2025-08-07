@@ -22,7 +22,7 @@ const App = () => {
             <div className="flex justify-between h-16">
               <div className="flex items-center">
                 <Link to="/" className="text-xl font-bold text-gray-900">
-                  Design<span className="text-indigo-600">Studio</span>
+                 <img src={'/images/alvess_logo.png'} className='w-30' alt="" />
                 </Link>
               </div>
               
