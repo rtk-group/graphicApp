@@ -5,12 +5,12 @@ const Portfolio = () => {
   const [filter, setFilter] = useState('all');
   
   const projects = [
-    { id: 1, title: 'Brand Identity Project', category: 'branding', image: 'brand1.jpg' },
-    { id: 2, title: 'Website Redesign', category: 'web', image: 'web1.jpg' },
-    { id: 3, title: 'Packaging Design', category: 'print', image: 'print1.jpg' },
-    { id: 4, title: 'Mobile App UI', category: 'web', image: 'web2.jpg' },
-    { id: 5, title: 'Logo Design', category: 'branding', image: 'brand2.jpg' },
-    { id: 6, title: 'Brochure Design', category: 'print', image: 'print2.jpg' },
+    { id: 1, title: 'Brand Identity Project', category: 'branding', image: '/images/brand.jpg' },
+    { id: 2, title: 'Website Redesign', category: 'web', image: '/images/website.jpg' },
+    { id: 3, title: 'Packaging Design', category: 'print', image: '/images/packing.jpg' },
+    { id: 4, title: 'Mobile App UI', category: 'web', image: '/images/ui_app.jpg' },
+    { id: 5, title: 'Logo Design', category: 'branding', image: '/images/logo_design.jpg' },
+    { id: 6, title: 'Brochure Design', category: 'print', image: '/images/broucher.jpg' },
   ];
   
   const filteredProjects = filter === 'all' 
@@ -53,8 +53,8 @@ const Portfolio = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map(project => (
           <div key={project.id} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
-            <div className="h-64 bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-500">{project.image}</span>
+            <div className={`h-64 bg-gray-200 bg-[url(${project.image})] ${project.id === 1 ? 'bg-[center_-60px]':''} ${project.id === 5 ? 'bg-[center_-100px]':''} bg-no-repeat bg-cover`}>
+              
             </div>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>

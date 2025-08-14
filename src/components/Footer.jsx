@@ -67,16 +67,6 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Connect</h4>
             <ul className="flex space-x-4 mb-4">
-              {/* {[<LuInstagram/>, <FaFacebookF/>, <FaTwitter/> , <FaLinkedinIn />].map((social) => (
-                <a 
-                  key={social} 
-                  href="#" 
-                  className="h-10 w-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-indigo-600 transition"
-                  aria-label={social}
-                >
-                  <span className="text-gray-300">{social}</span>
-                </a>
-              ))} */}
 
               {socialLinks.map((social, index) => (
                 <li key={index}>

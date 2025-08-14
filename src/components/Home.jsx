@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
+      <section className="py-20 bg-[url(/images/hero.jpg)] bg-no-repeat bg-center bg-cover text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Creative Design Solutions</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
@@ -27,20 +27,44 @@ const Home = () => {
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[1, 2, 3].map((item) => (
-            <div key={item} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+
+            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
               <div className="h-48 bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-500">Project Image {item}</span>
+                <img className="h-50 w-full" src='/images/img1.jpg' alt="" />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Project Title {item}</h3>
+                <h3 className="text-xl font-semibold mb-2">Project Title 1 </h3>
                 <p className="text-gray-600 mb-4">Brief description of the project and design approach.</p>
-                <Link to={`/portfolio/project-${item}`} className="text-indigo-600 hover:text-indigo-800 font-medium">
+                <Link to={`/portfolio/project`} className="text-indigo-600 hover:text-indigo-800 font-medium">
                   View Details →
                 </Link>
               </div>
             </div>
-          ))}
+            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+              <div className="h-48 bg-gray-200 flex items-center justify-center">
+                <img className="h-50 w-full" src='/images/img2.jpg' alt="" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Project Title 2 </h3>
+                <p className="text-gray-600 mb-4">Brief description of the project and design approach.</p>
+                <Link to={`/portfolio/project`} className="text-indigo-600 hover:text-indigo-800 font-medium">
+                  View Details →
+                </Link>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+              <div className="h-48 bg-gray-200 flex items-center justify-center ">
+                <img className="h-50 w-full" src='/images/img3.jpg' alt="" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Project Title 3 </h3>
+                <p className="text-gray-600 mb-4">Brief description of the project and design approach.</p>
+                <Link to={`/portfolio/project`} className="text-indigo-600 hover:text-indigo-800 font-medium">
+                  View Details →
+                </Link>
+              </div>
+            </div>
+
         </div>
         <div className="text-center mt-10">
           <Link to="/portfolio" className="px-6 py-3 bg-indigo-600 text-white rounded-md font-medium hover:bg-indigo-700 transition">
