@@ -23,7 +23,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      
+
       <div className="bg-white p-8 rounded-lg shadow-sm mb-12">
         <h2 className="text-2xl font-semibold mb-6">My Skills</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -37,7 +37,7 @@ const About = () => {
           ))}
         </div>
       </div>
-      
+
       <div className="bg-gray-100 p-8 rounded-lg">
         <h2 className="text-2xl font-semibold mb-6">Work Experience</h2>
         <div className="space-y-8">
@@ -56,5 +56,5 @@ const About = () => {
     </div>
   );
 };
- 
+
 export default About

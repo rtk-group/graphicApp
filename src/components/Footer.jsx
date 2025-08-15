@@ -26,7 +26,7 @@ const Footer = () => {
       icon: <LuInstagram />,
       bg: "bg-gradient-to-tr from-purple-500 to-pink-500",
       hoverBg: "bg-gradient-to-tr from-purple-600 to-pink-600",
-      href: "#",
+      href: "https://www.instagram.com/yogprint9015",
     },
     {
       icon: <FaTwitter />,
@@ -79,8 +79,10 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            <p className="text-gray-400">hello@graphics.com</p>
-            <p className="text-gray-400">+91 8439889910</p>
+            <p className="text-gray-400">alvesscreation@yahoo.com</p>
+            <p className="text-gray-400">+91 9015949848</p>
+            <p className="text-sm mt-3 text-gray-100 font-semibold">Made by WebDuality Pvt. Ltd.</p>
+            <a href="https://www.webduality.in" className="text-sm text-blue-400">www.webduality.in</a>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-12 py-4 text-center text-gray-400">

@@ -5,12 +5,12 @@ const Portfolio = () => {
   const [filter, setFilter] = useState('all');
   
   const projects = [
-    { id: 1, title: 'Brand Identity Project', category: 'branding', image: '/images/brand.jpg' },
+    { id: 1, title: 'Ads', category: 'branding', image: '/images/brand.jpg' },
     { id: 2, title: 'Website Redesign', category: 'web', image: '/images/website.jpg' },
     { id: 3, title: 'Packaging Design', category: 'print', image: '/images/packing.jpg' },
     { id: 4, title: 'Mobile App UI', category: 'web', image: '/images/ui_app.jpg' },
     { id: 5, title: 'Logo Design', category: 'branding', image: '/images/logo_design.jpg' },
-    { id: 6, title: 'Brochure Design', category: 'print', image: '/images/broucher.jpg' },
+    { id: 6, title: 'Calender', category: 'print', image: '/images/broucher.jpg' },
   ];
   
   const filteredProjects = filter === 'all' 
@@ -25,25 +25,25 @@ const Portfolio = () => {
       <div className="flex justify-center mb-12 space-x-4">
         <button 
           onClick={() => setFilter('all')} 
-          className={`px-4 py-2 rounded-md ${filter === 'all' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+          className={`px-2 sm:px-4 py-2 rounded-md ${filter === 'all' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
         >
           All Work
         </button>
         <button 
           onClick={() => setFilter('branding')} 
-          className={`px-4 py-2 rounded-md ${filter === 'branding' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+          className={`px-2 sm:px-4 py-2 rounded-md ${filter === 'branding' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
         >
           Branding
         </button>
         <button 
           onClick={() => setFilter('web')} 
-          className={`px-4 py-2 rounded-md ${filter === 'web' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+          className={`px-2 sm:px-4 py-2 rounded-md ${filter === 'web' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
         >
           Web Design
         </button>
         <button 
           onClick={() => setFilter('print')} 
-          className={`px-4 py-2 rounded-md ${filter === 'print' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+          className={`px-2 sm:px-4 py-2 rounded-md ${filter === 'print' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
         >
           Print Design
         </button>
@@ -53,7 +53,7 @@ const Portfolio = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map(project => (
           <div key={project.id} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
-            <div className={`h-64 bg-gray-200 bg-[url(${project.image})] ${project.id === 1 ? 'bg-[center_-60px]':''} ${project.id === 5 ? 'bg-[center_-100px]':''} bg-no-repeat bg-cover`}>
+            <div className="h-64 bg-no-repeat bg-cover" style={{ backgroundImage: `url('${project.image}')`,backgroundPosition: project.id === 1 ? 'center -60px' : project.id === 5 ? 'center -100px' : 'center' }}>
               
             </div>
             <div className="p-6">
