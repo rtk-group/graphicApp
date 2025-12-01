@@ -9,6 +9,7 @@ import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { images } from './assets/assets';
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,7 +23,7 @@ const App = () => {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <Link to="/" className="text-xl font-bold text-gray-900">
-                <img src={'/images/alvess_logo.png'} className='w-30' alt="" />
+                <img src={images.logo2} className='w-10' alt="" />
               </Link>
             </div>
 
@@ -32,7 +33,7 @@ const App = () => {
               <Link to="/portfolio" className="text-gray-900 hover:text-indigo-600">Portfolio</Link>
               <Link to="/services" className="text-gray-900 hover:text-indigo-600">Services</Link>
               <Link to="/about" className="text-gray-900 hover:text-indigo-600">About</Link>
-              <Link to="/contact" className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition">
+              <Link to="/contact" className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition">
                 Contact
               </Link>
             </div>

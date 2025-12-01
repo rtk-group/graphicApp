@@ -40,7 +40,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <img src={'/images/alvess_logo.png'} className="w-30" alt="" />
+            <img src={'/images/dhLogo2.jpg'} className="w-15 rounded-lg" alt="" />
             <p className="text-gray-400 mt-2">
               Creating meaningful design solutions that help brands connect with their audience.
             </p>
@@ -79,10 +79,10 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            <p className="text-gray-400">alvesscreation@yahoo.com</p>
-            <p className="text-gray-400">+91 9015949848</p>
-            <p className="text-sm mt-3 text-gray-100 font-semibold">Made by WebDuality Pvt. Ltd.</p>
-            <a href="https://www.webduality.in" className="text-sm text-blue-400">www.webduality.in</a>
+            <p className="text-gray-400">yadrammaithil@gmail.com</p>
+            <p className="text-gray-400">+91 7579873777</p>
+            <p className="text-sm mt-3 text-gray-100 font-semibold">made by RTK Group</p>
+            <a href="https://rtkgroup.netlify.app" className="text-sm text-blue-400">rtkgroup.com</a>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-12 py-4 text-center text-gray-400">

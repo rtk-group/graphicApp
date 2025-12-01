@@ -1,4 +1,5 @@
 import React from "react";
+import { images } from "../assets/assets";
 
 // About Component
 const About = () => {
@@ -6,8 +7,9 @@ const About = () => {
     <div className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col md:flex-row items-center mb-16">
         <div className="md:w-1/3 mb-8 md:mb-0">
-          <div className="h-64 w-64 bg-gray-300 rounded-full mx-auto flex items-center justify-center">
-            <span className="text-gray-500">Designer Photo</span>
+          <div className=" h-64 w-64 mx-auto flex items-center justify-center">
+            {/* <span className="text-gray-500">Designer Photo</span> */}
+            <img src={images.logo1} className=" w-55" alt="" />
           </div>
         </div>
         <div className="md:w-2/3 md:pl-12">

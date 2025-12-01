@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { images } from "../assets/assets";
 
 // Home Component
 const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-20 bg-[url(/images/hero.jpg)] bg-no-repeat bg-center bg-cover text-white">
+      <section style={{ backgroundImage: `url(${images.pre_img})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }} className="py-20 text-white" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Creative Design Solutions</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Maithil Card Printers</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Transforming ideas into visually stunning realities with innovative design.
+            Giving shape to your ideas!
           </p>
           <div className="space-x-4">
             <Link to="/portfolio" className="inline-block px-6 py-3 bg-white text-indigo-600 rounded-md font-medium hover:bg-gray-100 transition">
@@ -30,38 +31,49 @@ const Home = () => {
 
           <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
             <div className="h-55 bg-gray-200 flex items-center justify-center">
-              <img className="h-55 w-full" src='/images/website.jpg' alt="" />
+              <img className="h-55 w-full" src={images.web_ui} alt="" />
             </div>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2">Web Designs </h3>
               <p className="text-gray-600 mb-4">Brief description of the project and design approach.</p>
-              <Link to={`/portfolio/project`} className="text-indigo-600 hover:text-indigo-800 font-medium">
+              {/* for dynamic chage */}
+              {/* <Link to={`/portfolio/project`} className="text-indigo-600 hover:text-indigo-800 font-medium">
                 View Details →
-              </Link>
+              </Link> */}
+              <div className="text-indigo-600 hover:text-indigo-800 font-medium">
+                View Details →
+              </div>
             </div>
           </div>
           <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
             <div className="h-55 bg-gray-200 flex items-center justify-center">
-              <img className="h-55 w-full" src='/images/broucher.jpg' alt="" />
+              <img className="h-55 w-full" src={images.calendar} alt="" />
             </div>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2">Graphics Design </h3>
               <p className="text-gray-600 mb-4">Brief description of the project and design approach.</p>
-              <Link to={`/portfolio/project`} className="text-indigo-600 hover:text-indigo-800 font-medium">
+              {/* <Link to={`/portfolio/project`} className="text-indigo-600 hover:text-indigo-800 font-medium">
                 View Details →
-              </Link>
+              </Link> */}
+              <div className="text-indigo-600 hover:text-indigo-800 font-medium">
+                View Details →
+              </div>
             </div>
           </div>
           <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
             <div className="h-55 bg-gray-200 flex items-center justify-center">
-              <img className="object-cover h-55 w-full object-[0%_23%]" src='/images/brand.jpg' alt="" />
+              <img className="object-cover h-55 w-full object-[0%_23%]" src={images.adPoster2} alt="" />
             </div>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2">Ads Design </h3>
               <p className="text-gray-600 mb-4">Brief description of the project and design approach.</p>
-              <Link to={`/portfolio/project`} className="text-indigo-600 hover:text-indigo-800 font-medium">
+              {/* for dynamic change */}
+              {/* <Link to={`/portfolio/project`} className="text-indigo-600 hover:text-indigo-800 font-medium">
                 View Details →
-              </Link>
+              </Link> */}
+              <div className="text-indigo-600 hover:text-indigo-800 font-medium">
+                View Details →
+              </div>
             </div>
           </div>
 
